@@ -88,6 +88,7 @@ class Like(models.Model):
 
 
 class Tags(models.Model):
+    pagetitle = models.CharField(max_length=500, blank=True, null=True)
     description = models.CharField(max_length=500, blank=True, null=True)
     locale = models.CharField(max_length=500, blank=True, null=True)
     type = models.CharField(max_length=500, blank=True, null=True)
