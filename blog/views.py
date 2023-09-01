@@ -10,7 +10,7 @@ def article_list(request):
     articles = Article.objects.all()
     tags = Tags.objects.all()
     page_number = request.GET.get('page')
-    paginator = Paginator(articles, 6)
+    paginator = Paginator(articles, 1)
     object_list = paginator.get_page(page_number)
     context = {
         'articles': object_list,

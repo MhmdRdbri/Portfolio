@@ -66,7 +66,6 @@ class Portfolio(models.Model):
 
 class Tags(models.Model):
     description = models.CharField(max_length=500, blank=True, null=True)
-    canonical = models.CharField(max_length=500, blank=True, null=True)
     locale = models.CharField(max_length=500, blank=True, null=True)
     type = models.CharField(max_length=500, blank=True, null=True)
     title = models.CharField(max_length=500, blank=True, null=True)
