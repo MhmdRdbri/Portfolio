@@ -23,3 +23,4 @@ class FlatPageAdmin(admin.ModelAdmin):
 
 admin.site.register(Article, FlatPageAdmin)
 admin.site.register(Message)
+admin.site.register(Tags)

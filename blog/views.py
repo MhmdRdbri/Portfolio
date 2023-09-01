@@ -8,10 +8,11 @@ from blog.models import *
 
 def article_list(request):
     articles = Article.objects.all()
+    tags = Tags.objects.all()
     page_number = request.GET.get('page')
     paginator = Paginator(articles, 6)
     object_list = paginator.get_page(page_number)
-    return render(request, "blog/articles_list.html", {'articles': object_list})
+    return render(request, "blog/articles_list.html", {'articles': object_list, 'tags': tags})
 
 
 def article_detail(request, slug):
@@ -21,6 +22,3 @@ def article_detail(request, slug):
     #     body = request.POST.get('body')
     #     Comment.objects.create(body=body, article=articles, user=request.user, parent_id=parent_id)
     return render(request, "blog/article_details.html", {'articles': articles})
-
-
-

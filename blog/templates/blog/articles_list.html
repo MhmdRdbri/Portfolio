@@ -7,11 +7,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="Brex-Theme"/>
-    <!-- description -->
-    <meta
-            name="description"
-            content="Brex is a highly creative, modern, visually stunning and Bootstrap responsive multipurpose agency and portfolio HTML5 template."/>
+    <meta name="author" content="Mohammad Roudbari"/>
+     <!-- description -->
+    <meta name="description"
+          content="{{ tags.first.description }}"/>
+    <!-- canonical -->
+    <link rel="canonical" href="http://127.0.0.1:8000/blog/?page=1">
+
+
+    <meta property="og:locale" content="{{ tags.first.articles.localeOg }}">
+    <meta property="og:type" content="{{ tags.first.articles.typeOg }}">
+    <meta property="og:title" content="{{ tags.first.articles.titleOg }}">
+    <meta property="og:description" content="{{ tags.first.articles.descriptionOg }}">
+
+    <meta property="og:site_name" content="{{ tags.first.articles.site_name }}">
+    <meta property="article:modified_time" content="{{ tags.first.articles.created }}">
+
+    <meta property="og:image:width" content="{{ tags.first.articles.widthOg }}">
+    <meta property="og:image:height" content="{{ tags.first.articles.heightOg }}">
+    <meta property="og:image:type" content="image/jpeg">
     <!-- keywords -->
     <meta
             name="keywords"
