@@ -14,7 +14,7 @@ class FlatPageAdmin(admin.ModelAdmin):
             "Seo",
             {
                 "classes": ["collapse"],
-                "fields": ["description", "canonical", "localeOg", "typeOg", "titleOg", "descriptionOg",
+                "fields": ["pagetitle", "description", "canonical", "localeOg", "typeOg", "titleOg", "descriptionOg",
                            "site_name", "widthOg", "heightOg"],
             },
         ),
