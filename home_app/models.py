@@ -64,23 +64,6 @@ class Portfolio(models.Model):
         return self.title
 
 
-class Tags(models.Model):
-    description = models.CharField(max_length=500, blank=True, null=True)
-    locale = models.CharField(max_length=500, blank=True, null=True)
-    type = models.CharField(max_length=500, blank=True, null=True)
-    title = models.CharField(max_length=500, blank=True, null=True)
-    descriptionOg = models.CharField(max_length=500, blank=True, null=True)
-    site_name = models.CharField(max_length=400, blank=True, null=True)
-    modified_time = models.CharField(max_length=500, blank=True, null=True)
-
-    class Meta:
-        verbose_name = 'Home Page Tag'
-        verbose_name_plural = 'Home Page Tags'
-
-    def __str__(self):
-        return "Home Page Tags"
-
-
 class HomePageTags(models.Model):
     description = models.CharField(max_length=500, blank=True, null=True)
     locale = models.CharField(max_length=500, blank=True, null=True)
