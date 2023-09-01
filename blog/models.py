@@ -26,6 +26,18 @@ class Article(models.Model):
     updated = models.DateTimeField(auto_now=True)
     pub_date = models.DateField(default=timezone.datetime.now())
 
+    # tags
+    description = models.CharField(max_length=500, blank=True, null=True)
+    canonical = models.CharField(max_length=500, blank=True, null=True)
+    localeOg = models.CharField(max_length=500, blank=True, null=True)
+    typeOg = models.CharField(max_length=500, blank=True, null=True)
+    titleOg = models.CharField(max_length=500, blank=True, null=True)
+    descriptionOg = models.CharField(max_length=500, blank=True, null=True)
+    site_name = models.CharField(max_length=500, blank=True, null=True)
+    widthOg = models.PositiveIntegerField(blank=True, null=True)
+    heightOg = models.PositiveIntegerField(blank=True, null=True)
+    modified_time = models.CharField(max_length=500, blank=True, null=True)
+
     class Meta:
         ordering = ('-created',)
 
