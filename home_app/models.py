@@ -70,7 +70,7 @@ class Tags(models.Model):
     type = models.CharField(max_length=500, blank=True, null=True)
     title = models.CharField(max_length=500, blank=True, null=True)
     descriptionOg = models.CharField(max_length=500, blank=True, null=True)
-    site_name = models.CharField(max_length=500, blank=True, null=True)
+    site_name = models.CharField(max_length=400, blank=True, null=True)
     modified_time = models.CharField(max_length=500, blank=True, null=True)
 
     class Meta:
