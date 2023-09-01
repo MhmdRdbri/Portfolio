@@ -58,3 +58,17 @@ class Portfolio(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Tags(models.Model):
+    description = models.CharField(max_length=500)
+    canonical = models.CharField(max_length=500)
+    locale = models.CharField(max_length=500)
+    type = models.CharField(max_length=500)
+    title = models.CharField(max_length=500)
+    descriptionOg = models.CharField(max_length=500)
+    site_name = models.CharField(max_length=500)
+    modified_time = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.title
