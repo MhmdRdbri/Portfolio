@@ -12,7 +12,11 @@ def article_list(request):
     page_number = request.GET.get('page')
     paginator = Paginator(articles, 6)
     object_list = paginator.get_page(page_number)
-    return render(request, "blog/articles_list.html", {'articles': object_list, 'tags': tags})
+    context = {
+        'articles': object_list,
+        'tags': tags
+    }
+    return render(request, "blog/articles_list.html", context)
 
 
 def article_detail(request, slug):

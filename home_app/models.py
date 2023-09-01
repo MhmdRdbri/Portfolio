@@ -41,6 +41,10 @@ class Facts(models.Model):
     projects = models.PositiveIntegerField()
     clients = models.PositiveIntegerField()
 
+    class Meta:
+        verbose_name = 'Fact'
+        verbose_name_plural = 'Facts'
+
     def __str__(self):
         return 'HI'
 
@@ -69,6 +73,10 @@ class Tags(models.Model):
     descriptionOg = models.CharField(max_length=500, blank=True, null=True)
     site_name = models.CharField(max_length=500, blank=True, null=True)
     modified_time = models.CharField(max_length=500, blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'Home Page Tag'
+        verbose_name_plural = 'Home Page Tags'
 
     def __str__(self):
         return "Home Page Tags"

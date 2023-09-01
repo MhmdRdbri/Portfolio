@@ -95,6 +95,12 @@ class Tags(models.Model):
     descriptionOg = models.CharField(max_length=500, blank=True, null=True)
     site_name = models.CharField(max_length=500, blank=True, null=True)
     modified_time = models.CharField(max_length=500, blank=True, null=True)
+    width = models.PositiveIntegerField(blank=True, null=True)
+    height = models.PositiveIntegerField(blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'Blog Page Tag'
+        verbose_name_plural = 'Blog Page Tags'
 
     def __str__(self):
-        return "Home Page Tags"
+        return "Blog Page Tags"
