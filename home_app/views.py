@@ -13,7 +13,7 @@ def home(request):
     fact = Facts.objects.all()
     portfolio = Portfolio.objects.all()
     articles = Article.objects.all()[:3]
-    tags = Tags.objects.get(id=1)
+    tags = HomePageTags.objects.all()
     form = MessageForm()
     if request.method == 'POST':
         form = MessageForm(data=request.POST)
