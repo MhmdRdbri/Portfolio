@@ -12,6 +12,7 @@ def home(request):
     service = Service.objects.all()
     fact = Facts.objects.all()
     portfolio = Portfolio.objects.all()
+    articles = Article.objects.all()[:3]
     form = MessageForm()
     if request.method == 'POST':
         form = MessageForm(data=request.POST)
@@ -45,5 +46,6 @@ def home(request):
         'fact': fact,
         'portfolio': portfolio,
         'form': form,
+        'articles': articles,
     }
     return render(request, 'home_app/Home.html', context)
