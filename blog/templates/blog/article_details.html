@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-    <head>
-        <!-- Title -->
-        <title>Alamin</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="author" content="Brex-Theme"/>
-        <!-- description -->
-        <meta
-            name="description"
-            content="Brex is a highly creative, modern, visually stunning and Bootstrap responsive multipurpose agency and portfolio HTML5 template."/>
-        <!-- keywords -->
-        <meta
+<head>
+    <!-- Title -->
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Brex-Theme"/>
+    <!-- description -->
+    <meta name="description"
+          content="{{ articles.description }}"/>
+    <!-- canonical -->
+    <link rel="canonical" href="{{ articles.canonical }}">
+
+
+    <meta property="og:locale" content="{{ articles.localeOg }}">
+    <meta property="og:type" content="{{ articles.typeOg }}">
+    <meta property="og:title" content="{{ articles.titleOg }}">
+    <meta property="og:description" content="{{ articles.descriptionOg }}">
+
+    <meta property="og:site_name" content="{{ articles.site_name }}">
+    <meta property="article:modified_time" content="{{ articles.modified_time }}">
+
+    <meta property="og:image:width" content="{{ articles.widthOg }}">
+    <meta property="og:image:height" content="{{ articles.heightOg }}">
+    <meta property="og:image:type" content="image/jpeg">
+    <!-- keywords -->
+    <meta
             name="keywords"
             content="creative, modern, clean, bootstrap responsive, html5, css3, portfolio, blog, agency, templates, multipurpose, one page, corporate, start-up, studio, branding, designer, freelancer, carousel, parallax, photography, personal"/>
-        <!-- animation -->
+    <!-- animation -->
     <link rel="stylesheet" href="{% static 'css3/plugins/animate.css' %}"/>
     <!-- Animated Headlines -->
     <link rel="stylesheet" href="{% static 'css3/plugins/animated-headlines.css' %}"/>
@@ -32,107 +46,106 @@
     <link rel="stylesheet" href="{% static 'css3/plugins/magnific-popup.css' %}"/>
     <!-- Main Style -->
     <link rel="stylesheet" href="{% static 'css3/main.css' %}"/>
-    </head>
+</head>
 
-    <body>
-        <!-- ===== Start Navbar ===== -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="../light/index.html"><img src="{% static 'img/logo.png' %}" alt=""></a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#slider">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#services">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#portfolio">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#testimonials">Testimonials</a>
-                        </li>
-                        <!-- Drop Down-->
-                        <li class="nav-item dropdown">
-                            <a
-                                class="nav-link "
-                                href="#"
-                                id="navbarDropdown"
-                                role="button"
-                                data-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="false">
-                                Blog
+<body>
+<!-- ===== Start Navbar ===== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="../light/index.html"><img src="{% static 'img/logo.png' %}" alt=""></a>
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#slider">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">Testimonials</a>
+                </li>
+                <!-- Drop Down-->
+                <li class="nav-item dropdown">
+                    <a
+                            class="nav-link "
+                            href="#"
+                            id="navbarDropdown"
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false">
+                        Blog
 
-                            </a>
+                    </a>
 
-                        </li>
-                        <!-- Drop Down-->
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- ===== End Navbar ===== -->
+                </li>
+                <!-- Drop Down-->
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- ===== End Navbar ===== -->
 
 
-        <!-- ===== Start Blog ===== -->
-        <section class="blog" id="blog">
-            <div class="container">
-{#                <h1 class="text-center">Our Blog</h1>#}
-                <div class="row">
-                    <!-- Post-1 -->
-                    <div class="col-12">
-                        <div class="box">
-                            <div class="image">
-                                    <img src="{{ articles.image.url }}" alt="{{ articles.alt }}">
-{#                                    <a href="" class="cate">Web</a>#}
-                            </div>
-                            <div class="text">
-                                    <h1>{{ articles.title }}</h1>
-                                    <h4>{{ articles.created }}</h4>
-                                <p>{{ articles.body|safe }}</p>
-                            </div>
-                        </div>
+<!-- ===== Start Blog ===== -->
+<section class="blog" id="blog">
+    <div class="container">
+        {#                <h1 class="text-center">Our Blog</h1>#}
+        <div class="row">
+            <!-- Post-1 -->
+            <div class="col-12">
+                <div class="box">
+                    <div class="image">
+                        <img src="{{ articles.image.url }}" alt="{{ articles.alt }}">
+                        {#                                    <a href="" class="cate">Web</a>#}
                     </div>
-
-
-
+                    <div class="text">
+                        <h1>{{ articles.title }}</h1>
+                        <h4>{{ articles.created }}</h4>
+                        <p>{{ articles.body|safe }}</p>
+                    </div>
                 </div>
             </div>
-        </section>
-        <!-- ===== End Blog ===== -->
 
-        <!-- ===== Start Footer ===== -->
-        <footer class="footer text-center">
-            <div class="social-icons">
-                <span class="fa fa-facebook" aria-hidden="true"></span>
-            <span class="fa fa-twitter" aria-hidden="true"></span>
-            <span class="fa fa-dribbble" aria-hidden="true"></span>
-            <span class="fa fa-skype" aria-hidden="true"></span>
-            </div>
-            <p>All Right Resceved 2018</p>
-        </footer>
-        <!-- ===== End Footer ===== -->
 
-        <!-- ==== javascript libraries ==== -->
-        <!-- jQuery-->
+        </div>
+    </div>
+</section>
+<!-- ===== End Blog ===== -->
+
+<!-- ===== Start Footer ===== -->
+<footer class="footer text-center">
+    <div class="social-icons">
+        <span class="fa fa-facebook" aria-hidden="true"></span>
+        <span class="fa fa-twitter" aria-hidden="true"></span>
+        <span class="fa fa-dribbble" aria-hidden="true"></span>
+        <span class="fa fa-skype" aria-hidden="true"></span>
+    </div>
+    <p>All Right Resceved 2018</p>
+</footer>
+<!-- ===== End Footer ===== -->
+
+<!-- ==== javascript libraries ==== -->
+<!-- jQuery-->
 <script src="{% static 'js/plugins/jquery-3.3.1.min.js' %}"></script>
 <!-- Bootstrap 4.1.3 -->
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
@@ -161,5 +174,5 @@
 <script src="{% static 'js/plugins/animated-headlines.js' %}"></script>
 <script src="{% static 'js/main.js' %}"></script>
 
-    </body>
+</body>
 </html>

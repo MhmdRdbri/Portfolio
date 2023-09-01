@@ -13,7 +13,7 @@ def home(request):
     fact = Facts.objects.all()
     portfolio = Portfolio.objects.all()
     articles = Article.objects.all()[:3]
-    sajjad = Tags.objects.all()
+    tags = Tags.objects.all()
     form = MessageForm()
     if request.method == 'POST':
         form = MessageForm(data=request.POST)
@@ -48,6 +48,6 @@ def home(request):
         'portfolio': portfolio,
         'form': form,
         'articles': articles,
-        'sajjad': sajjad,
+        'tags': tags,
     }
     return render(request, 'home_app/Home.html', context)
