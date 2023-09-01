@@ -61,14 +61,12 @@ class Portfolio(models.Model):
 
 
 class Tags(models.Model):
-    description = models.CharField(max_length=500)
-    canonical = models.CharField(max_length=500)
-    locale = models.CharField(max_length=500)
-    type = models.CharField(max_length=500)
-    title = models.CharField(max_length=500)
-    descriptionOg = models.CharField(max_length=500)
-    site_name = models.CharField(max_length=500)
-    modified_time = models.CharField(max_length=500)
+    description = models.CharField(max_length=500, blank=True, null=True)
+    canonical = models.CharField(max_length=500, blank=True, null=True)
+    locale = models.CharField(max_length=500, blank=True, null=True)
+    type = models.CharField(max_length=500, blank=True, null=True)
+    title = models.CharField(max_length=500, blank=True, null=True)
+    descriptionOg = models.CharField(max_length=500, blank=True, null=True)
+    site_name = models.CharField(max_length=500, blank=True, null=True)
+    modified_time = models.CharField(max_length=500, blank=True, null=True)
 
-    def __str__(self):
-        return self.title
