@@ -28,6 +28,7 @@ class Service(models.Model):
     title = models.CharField(max_length=70)
     body = models.TextField()
     icon = models.CharField(max_length=30, null=True, blank=True)
+
     # alt = models.CharField(max_length=50)
 
     def __str__(self):
@@ -45,9 +46,15 @@ class Facts(models.Model):
 
 
 class Portfolio(models.Model):
+    CHOICES = (
+        ('design', 'Design'),
+        ('marketing', 'Marketing'),
+        ('development', 'Development'),
+    )
     title = models.CharField(max_length=50)
     image = models.ImageField(upload_to="images/portfolio")
     alt = models.CharField(max_length=50)
+    sort = models.CharField(max_length=300, choices=CHOICES, default="design")
 
     def __str__(self):
         return self.title

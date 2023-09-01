@@ -63,7 +63,7 @@
                 </li>
                 <!-- Drop Down-->
                 <li class="nav-item">
-                    <a class="nav-link" href="">Blog</a>
+                    <a class="nav-link" href="#blog">Blog</a>
 {#                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">#}
 {#                        <a class="dropdown-item" href="../blog/index.html">Blog List</a>#}
 {#                        <a class="dropdown-item" href="../single-post/index.html">Single Post</a>#}
@@ -225,7 +225,7 @@
         <div class="row grid">
             <!-- Image-1 -->
             {% for portfolios in portfolio %}
-                <div class="col-lg-4 col-md-6 grid-item marketing">
+                <div class="col-lg-4 col-md-6 grid-item {{ portfolios. }}">
                     <div class="single-portfolio-item ">
                         <img src="{{ portfolios.image.url }}" alt="{{ portfolios.alt }}" class="img-fluid">
                         <div class="overlay text-center">

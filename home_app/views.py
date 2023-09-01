@@ -11,7 +11,7 @@ def home(request):
     about = About.objects.all()
     service = Service.objects.all()
     fact = Facts.objects.all()
-    portfolio = Portfolio.objects.all()[:3]
+    portfolio = Portfolio.objects.all()
     form = MessageForm()
     if request.method == 'POST':
         form = MessageForm(data=request.POST)
