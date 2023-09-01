@@ -65,13 +65,13 @@ class Portfolio(models.Model):
 
 
 class HomePageTags(models.Model):
-    description = models.CharField(max_length=500, blank=True, null=True)
-    locale = models.CharField(max_length=500, blank=True, null=True)
-    type = models.CharField(max_length=500, blank=True, null=True)
-    title = models.CharField(max_length=500, blank=True, null=True)
-    descriptionOg = models.CharField(max_length=500, blank=True, null=True)
-    site_name = models.CharField(max_length=400, blank=True, null=True)
-    modified_time = models.CharField(max_length=500, blank=True, null=True)
+    description = models.CharField(max_length=500, blank=True, null=True, verbose_name='Description')
+    locale = models.CharField(max_length=500, blank=True, null=True, verbose_name='Og:locale')
+    type = models.CharField(max_length=500, blank=True, null=True, verbose_name='Og:type')
+    title = models.CharField(max_length=500, blank=True, null=True, verbose_name='Og:title')
+    descriptionOg = models.CharField(max_length=500, blank=True, null=True, verbose_name='Og:description')
+    site_name = models.CharField(max_length=400, blank=True, null=True, verbose_name='Og:site_name')
+    modified_time = models.CharField(max_length=500, blank=True, null=True, verbose_name='Modified_time')
 
     class Meta:
         verbose_name = 'HomePage Tag'

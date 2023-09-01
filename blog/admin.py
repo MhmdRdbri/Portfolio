@@ -7,7 +7,13 @@ class FlatPageAdmin(admin.ModelAdmin):
         (
             "Article",
             {
-                "fields": ["author", "title", "slug", "body", "image", "alt", "pub_date"],
+                "fields": ["author", "title", "slug", "image", "alt", "pub_date"],
+            },
+        ),
+        (
+            "Editor",
+            {
+                "fields": ["body"],
             },
         ),
         (

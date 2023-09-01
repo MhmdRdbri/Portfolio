@@ -16,27 +16,27 @@ class Category(models.Model):
 
 
 class Article(models.Model):
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
-    title = models.CharField(max_length=100)
-    slug = models.SlugField(unique=True, blank=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Author')
+    title = models.CharField(max_length=100, verbose_name='Title')
+    slug = models.SlugField(unique=True, blank=True, verbose_name='Slug')
     body = CKEditor5Field('Text', config_name='extends')
-    image = models.ImageField(upload_to="images/articles")
-    alt = models.CharField(max_length=100)
-    created = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now=True)
-    pub_date = models.DateField(default=timezone.datetime.now())
+    image = models.ImageField(upload_to="images/articles", verbose_name='Image')
+    alt = models.CharField(max_length=100, verbose_name='Alt')
+    created = models.DateTimeField(auto_now_add=True, verbose_name='Created')
+    updated = models.DateTimeField(auto_now=True, verbose_name='Updated')
+    pub_date = models.DateField(default=timezone.datetime.now(), verbose_name='Publish Date')
 
     # tags
-    pagetitle = models.CharField(max_length=500, blank=True, null=True)
-    description = models.CharField(max_length=500, blank=True, null=True)
-    canonical = models.CharField(max_length=500, blank=True, null=True)
-    localeOg = models.CharField(max_length=500, blank=True, null=True)
-    typeOg = models.CharField(max_length=500, blank=True, null=True)
-    titleOg = models.CharField(max_length=500, blank=True, null=True)
-    descriptionOg = models.CharField(max_length=500, blank=True, null=True)
-    site_name = models.CharField(max_length=500, blank=True, null=True)
-    widthOg = models.PositiveIntegerField(blank=True, null=True)
-    heightOg = models.PositiveIntegerField(blank=True, null=True)
+    pagetitle = models.CharField(max_length=500, blank=True, null=True, verbose_name='Title')
+    description = models.CharField(max_length=500, blank=True, null=True, verbose_name='Description')
+    canonical = models.CharField(max_length=500, blank=True, null=True, verbose_name='Canonical')
+    localeOg = models.CharField(max_length=500, blank=True, null=True, verbose_name='Og:locale')
+    typeOg = models.CharField(max_length=500, blank=True, null=True, verbose_name='Og:type')
+    titleOg = models.CharField(max_length=500, blank=True, null=True, verbose_name='Og:title')
+    descriptionOg = models.CharField(max_length=500, blank=True, null=True, verbose_name='Og:description')
+    site_name = models.CharField(max_length=500, blank=True, null=True, verbose_name='Og:site_name')
+    widthOg = models.PositiveIntegerField(blank=True, null=True, verbose_name='Og:image:width')
+    heightOg = models.PositiveIntegerField(blank=True, null=True, verbose_name='Og:image:height')
 
     class Meta:
         ordering = ('-created',)
@@ -89,15 +89,14 @@ class Like(models.Model):
 
 
 class Tags(models.Model):
-    description = models.CharField(max_length=500, blank=True, null=True)
-    locale = models.CharField(max_length=500, blank=True, null=True)
-    type = models.CharField(max_length=500, blank=True, null=True)
-    title = models.CharField(max_length=500, blank=True, null=True)
-    descriptionOg = models.CharField(max_length=500, blank=True, null=True)
-    site_name = models.CharField(max_length=500, blank=True, null=True)
-    modified_time = models.CharField(max_length=500, blank=True, null=True)
-    width = models.PositiveIntegerField(blank=True, null=True)
-    height = models.PositiveIntegerField(blank=True, null=True)
+    description = models.CharField(max_length=500, blank=True, null=True, verbose_name='Description')
+    locale = models.CharField(max_length=500, blank=True, null=True, verbose_name='Og:locale')
+    type = models.CharField(max_length=500, blank=True, null=True, verbose_name='Og:type')
+    title = models.CharField(max_length=500, blank=True, null=True, verbose_name='Og:title')
+    descriptionOg = models.CharField(max_length=500, blank=True, null=True, verbose_name='Og:description')
+    site_name = models.CharField(max_length=500, blank=True, null=True, verbose_name='Og:site_name')
+    width = models.PositiveIntegerField(blank=True, null=True, verbose_name='Og:image:width')
+    height = models.PositiveIntegerField(blank=True, null=True, verbose_name='Og:image:height')
 
     class Meta:
         verbose_name = 'Blog Page Tag'
