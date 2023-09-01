@@ -27,6 +27,7 @@ class Article(models.Model):
     pub_date = models.DateField(default=timezone.datetime.now())
 
     # tags
+    pagetitle = models.CharField(max_length=500, blank=True, null=True)
     description = models.CharField(max_length=500, blank=True, null=True)
     canonical = models.CharField(max_length=500, blank=True, null=True)
     localeOg = models.CharField(max_length=500, blank=True, null=True)
@@ -88,7 +89,6 @@ class Like(models.Model):
 
 
 class Tags(models.Model):
-    pagetitle = models.CharField(max_length=500, blank=True, null=True)
     description = models.CharField(max_length=500, blank=True, null=True)
     locale = models.CharField(max_length=500, blank=True, null=True)
     type = models.CharField(max_length=500, blank=True, null=True)
