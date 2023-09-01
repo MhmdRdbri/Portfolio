@@ -36,7 +36,6 @@ class Article(models.Model):
     site_name = models.CharField(max_length=500, blank=True, null=True)
     widthOg = models.PositiveIntegerField(blank=True, null=True)
     heightOg = models.PositiveIntegerField(blank=True, null=True)
-    modified_time = models.CharField(max_length=500, blank=True, null=True)
 
     class Meta:
         ordering = ('-created',)

@@ -1,5 +1,25 @@
 from django.contrib import admin
 from .models import *
 
-admin.site.register(Article)
+
+class FlatPageAdmin(admin.ModelAdmin):
+    fieldsets = [
+        (
+            "Article",
+            {
+                "fields": ["author", "title", "slug", "body", "image", "alt", "pub_date"],
+            },
+        ),
+        (
+            "Seo",
+            {
+                "classes": ["collapse"],
+                "fields": ["description", "canonical", "localeOg", "typeOg", "titleOg", "descriptionOg",
+                           "site_name", "widthOg", "heightOg"],
+            },
+        ),
+    ]
+
+
+admin.site.register(Article, FlatPageAdmin)
 admin.site.register(Message)
