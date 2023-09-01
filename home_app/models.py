@@ -70,3 +70,5 @@ class Tags(models.Model):
     site_name = models.CharField(max_length=500, blank=True, null=True)
     modified_time = models.CharField(max_length=500, blank=True, null=True)
 
+    def __str__(self):
+        return "Home Page Tags"
