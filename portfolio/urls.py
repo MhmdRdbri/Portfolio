@@ -23,7 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home_app.urls', namespace='home_app')),
     path('', include('blog.urls')),
-    path('/about', include('about.urls')),
+    path('about/', include('about.urls')),
     path("ckeditor5/", include('django_ckeditor_5.urls'), name="ck_editor_5_upload_file"),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
