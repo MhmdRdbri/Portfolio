@@ -10,7 +10,7 @@
     <meta name="author" content="Mohammad Roudbari"/>
     <!-- description -->
     <meta name="description"
-          content="{{tags.first.description}}"/>
+          content="{{ tags.first.description }}"/>
     <!-- canonical -->
     <link rel="canonical" href="{{ request.build_absolute_uri }}">
 
@@ -48,6 +48,8 @@
     <link rel="stylesheet" href="{% static 'css/plugins/magnific-popup.css' %}"/>
     <!-- Main Style -->
     <link rel="stylesheet" href="{% static 'css/main.css' %}"/>
+
+
 </head>
 
 <body>
@@ -108,7 +110,7 @@
                     <div class="animated-headlines">
                         <h1 class="cd-headline clip is-full-width">
                                 <span class="cd-words-wrapper">
-                                    <b class="is-visible bolddd">Mohammad Roudbari</b>
+                                    <b class="is-visible">Mohammad Roudbari</b>
                                             <b>Web Developer</b>
                                             <b>UI/UX Designer</b>
                                         </span>
@@ -346,7 +348,9 @@
             {% endfor %}
         </div>
     </div>
-    <a href="" class="cate">Web</a>#}
+    <div class="tx-center">
+        <a href="{% url 'blog:articles_list' %}" class="cate blog-more">MORE</a>
+    </div>
 </section>
 <!-- ===== End Blog ===== -->
 
@@ -383,17 +387,16 @@
             </div>
             <div class="col-md-4">
                 <div class="info">
+                    <br>
                     <span class="fa fa-map-marker"></span>
-                    <p>2651 Main Street, Suit 124
-                        <br> Seattle, WA, 98101</p>
+                    <p>Sari, Mazandaran, Iran
+                        <br> </p>
 
                     <span class="fa fa-mobile"></span>
-                    <p>0123456789
-                        <br> 0345627891
-                    </p>
+                    <p>@Mhmd_rdbri</p>
 
                     <span class="fa fa-at"></span>
-                    <p>hello@thetheme.io <br> inf0@brex-theme.io</p>
+                    <p>Mohammadroodbari2019@gmail.com<br></p>
                 </div>
             </div>
         </div>

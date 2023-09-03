@@ -23,8 +23,8 @@ SECRET_KEY = 'django-insecure-ot!d6+q!z802(xzo)7@q(tyu5)f=&9x00gd087nj$#$xrl36tl
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-CSRF_TRUSTED_ORIGINS=['https://e433-37-98-3-226.ngrok-free.app']
-ALLOWED_HOSTS = ['e433-37-98-3-226.ngrok-free.app']
+# CSRF_TRUSTED_ORIGINS=[]
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django_ckeditor_5',
     'home_app.apps.HomeAppConfig',
     'blog.apps.BlogConfig',
+    'about.apps.AboutConfig',
 ]
 
 MIDDLEWARE = [
